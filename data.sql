@@ -52,3 +52,12 @@ select MIN(id) from users;
 
 --The MAX() function returns the largest value of the selected column.
 select MAX(id) from users;
+
+
+
+-- Stored procedure
+CREATE OR REPLACE FUNCTION add_numbers(a INT, b INT) RETURNS INT AS $$
+BEGIN
+    RETURN a + b;
+END;
+$$ LANGUAGE plpgsql;
